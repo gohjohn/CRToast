@@ -5,7 +5,19 @@
 
 `CRToast` is a library that allows you to easily create notifications that appear on top of or by pushing out the status bar or navigation bar. `CRToast` was originally based on [CWStatusBarNotification](https://github.com/cezarywojcik/CWStatusBarNotification).
 
+This fork of CRToast adds setOutAnimationDirection: to CRToastManager.
+
 ![demo](screenshots/demo.gif)
+
+## Example usage of setOutAnimationDirection in a CRToastInteractionResponder
+
+```	objc
+CRToastInteractionResponder *interaction = [CRToastInteractionResponder interactionResponderWithInteractionType:CRToastInteractionTypeSwipeRight automaticallyDismiss:NO block:^(CRToastInteractionType interactionType) {
+                                NSLog(@"Right");
+                                [CRToastManager setOutAnimationDirection:CRToastAnimationDirectionRight];
+                                [CRToastManager dismissNotification:YES];
+                            }];
+```
 
 ## Requirements
 
