@@ -19,8 +19,8 @@
 @property (nonatomic, readonly) BOOL showingNotification;
 @property (nonatomic, strong) UIWindow *notificationWindow;
 @property (nonatomic, strong) UIView *statusBarView;
-@property (nonatomic, strong) UIView *notificationView;
 @property (nonatomic, readonly) CRToast *notification;
+@property (nonatomic, strong) UIView *notificationView;
 @property (nonatomic, strong) NSMutableArray *notifications;
 @property (nonatomic, copy) void (^gravityAnimationCompletionBlock)(BOOL finished);
 @end
@@ -31,6 +31,13 @@ typedef void (^CRToastAnimationCompletionBlock)(BOOL animated);
 typedef void (^CRToastAnimationStepBlock)(void);
 
 @implementation CRToastManager
+
++ (void)setOutAnimationDirection:(NSInteger)direction{
+    NSDictionary *options = [CRToastManager manager].notification.options;
+    NSMutableDictionary *mOptions = [NSMutableDictionary dictionaryWithDictionary:options];
+    mOptions[kCRToastAnimationOutDirectionKey] = @(direction);
+    [[CRToastManager manager].notification setOptions:mOptions];
+}
 
 + (void)setDefaultOptions:(NSDictionary*)defaultOptions {
     [CRToast setDefaultOptions:defaultOptions];

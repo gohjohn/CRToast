@@ -4,12 +4,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CRToast.h"
 
 /**
  A toast manager providing Class level API's for the presentation of notifications with a variery of options
  */
 
 @interface CRToastManager : NSObject
+
+/**
+ Sets current notification option for kCRToastAnimationOutDirectionKey
+ Expects type: CRToastAnimationDirection
+ */
+
++ (void)setOutAnimationDirection:(NSInteger)direction;
 
 /**
  Sets the default options that CRToast will use when displaying a notification
