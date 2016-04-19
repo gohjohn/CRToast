@@ -3,21 +3,36 @@
 [![Build Status](https://travis-ci.org/cruffenach/CRToast.svg?branch=master)](https://travis-ci.org/cruffenach/CRToast)
 [![Pod Version](http://img.shields.io/cocoapods/v/CRToast.svg?style=flat)](http://cocoadocs.org/docsets/CRToast)
 
+The purpose of this fork is to allow dismissal of the toast to match the direction of the swipe. To do so, this fork adds setOutAnimationDirection: to CRToastManager.
+
+## Example usage of dismissal based on swipe direction
+
+```	objc
+    CRToastInteractionResponder *interactionLeft = [CRToastInteractionResponder interactionResponderWithInteractionType:CRToastInteractionTypeSwipeLeft automaticallyDismiss:NO block:^(CRToastInteractionType interactionType) {
+        NSLog(@"Left");
+        [CRToastManager setOutAnimationDirection:CRToastAnimationDirectionLeft];
+        [CRToastManager dismissNotification:YES];
+    }];
+    CRToastInteractionResponder *interactionRight = [CRToastInteractionResponder interactionResponderWithInteractionType:CRToastInteractionTypeSwipeRight automaticallyDismiss:NO block:^(CRToastInteractionType interactionType) {
+        NSLog(@"Right");
+        [CRToastManager setOutAnimationDirection:CRToastAnimationDirectionRight];
+        [CRToastManager dismissNotification:YES];
+    }];
+    
+        NSDictionary *options = @{
+                              ...
+                              kCRToastInteractionRespondersKey:@[interactionClick,interactionLeft,interactionRight]
+                              };
+```
+
+## CRToast
+
 `CRToast` is a library that allows you to easily create notifications that appear on top of or by pushing out the status bar or navigation bar. `CRToast` was originally based on [CWStatusBarNotification](https://github.com/cezarywojcik/CWStatusBarNotification).
 
-This fork of CRToast adds setOutAnimationDirection: to CRToastManager.
 
 ![demo](screenshots/demo.gif)
 
-## Example usage of setOutAnimationDirection in a CRToastInteractionResponder
 
-```	objc
-CRToastInteractionResponder *interaction = [CRToastInteractionResponder interactionResponderWithInteractionType:CRToastInteractionTypeSwipeRight automaticallyDismiss:NO block:^(CRToastInteractionType interactionType) {
-                                NSLog(@"Right");
-                                [CRToastManager setOutAnimationDirection:CRToastAnimationDirectionRight];
-                                [CRToastManager dismissNotification:YES];
-                            }];
-```
 
 ## Requirements
 
@@ -27,7 +42,7 @@ CRToastInteractionResponder *interaction = [CRToastInteractionResponder interact
 
 ### CocoaPods
 
-`pod 'CRToast', '~> 0.0.7'`
+`pod 'CRToast', :git => 'https://github.com/gohjohn/CRToast.git'`
 
 ### Manual
 
