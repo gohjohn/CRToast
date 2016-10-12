@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E2FFB5218367C01003333F8"
-               BuildableName = "CRToastDemo.app"
-               BlueprintName = "CRToastDemo"
-               ReferencedContainer = "container:CRToastDemo.xcodeproj">
+               BlueprintIdentifier = "464D04B51BD21BE600E0E90A"
+               BuildableName = "libCRToast.a"
+               BlueprintName = "CRToast-static"
+               ReferencedContainer = "container:CRToast.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D8F2E0718CED50A0077A7F6"
-               BuildableName = "CRToastTests.xctest"
-               BlueprintName = "CRToastTests"
-               ReferencedContainer = "container:CRToastDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E2FFB5218367C01003333F8"
-            BuildableName = "CRToastDemo.app"
-            BlueprintName = "CRToastDemo"
-            ReferencedContainer = "container:CRToastDemo.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E2FFB5218367C01003333F8"
-            BuildableName = "CRToastDemo.app"
-            BlueprintName = "CRToastDemo"
-            ReferencedContainer = "container:CRToastDemo.xcodeproj">
+            BlueprintIdentifier = "464D04B51BD21BE600E0E90A"
+            BuildableName = "libCRToast.a"
+            BlueprintName = "CRToast-static"
+            ReferencedContainer = "container:CRToast.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E2FFB5218367C01003333F8"
-            BuildableName = "CRToastDemo.app"
-            BlueprintName = "CRToastDemo"
-            ReferencedContainer = "container:CRToastDemo.xcodeproj">
+            BlueprintIdentifier = "464D04B51BD21BE600E0E90A"
+            BuildableName = "libCRToast.a"
+            BlueprintName = "CRToast-static"
+            ReferencedContainer = "container:CRToast.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

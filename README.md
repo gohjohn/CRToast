@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/cruffenach/CRToast.svg?branch=master)](https://travis-ci.org/cruffenach/CRToast)
 [![Pod Version](http://img.shields.io/cocoapods/v/CRToast.svg?style=flat)](http://cocoadocs.org/docsets/CRToast)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 The purpose of this fork is to allow dismissal of the toast to match the direction of the swipe. To do so, this fork adds setOutAnimationDirection: to CRToastManager.
 
@@ -44,9 +45,13 @@ The purpose of this fork is to allow dismissal of the toast to match the directi
 
 `pod 'CRToast', :git => 'https://github.com/gohjohn/CRToast.git'`
 
+### Carthage
+
+`github "cruffenach/CRToast"`
+
 ### Manual
 
-Copy the folder `CRToast` to your project.
+Add the project or source files to your own project.
 
 ## Usage
 
